@@ -4,6 +4,8 @@ Tekstavontuur. Je bent nachtwaker in het Stadsarchief. Het huis is van binnenuit
 
 Typ wat je doet. Nederlands en Engels worden allebei begrepen.
 
+> **Agents:** dit is `rokit-beep/nachtarchief`. Niet OpenNight (`OpenNigh`). Niet `text-bssed-game-pro`. Zie `AGENTS.md`.
+
 ## Spelen
 
 Live PWA: https://rokit-beep.github.io/
@@ -63,4 +65,6 @@ Canonieke bron: deze repository.
 - `src/components/game-shell.tsx` — schil
 - `src/main.tsx` — Vite-entry
 
+Live site is de build in `rokit-beep.github.io` — daar geen game-code wijzigen.
 Oude werknaam `text-bssed-game-pro` is geen bron meer.
+OpenNight (`rokit-beep/OpenNigh`) is een ander product; daar niets van dit spel naartoe pushen.
