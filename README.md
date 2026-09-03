@@ -6,7 +6,23 @@ Typ wat je doet. Nederlands en Engels worden allebei begrepen.
 
 ## Spelen
 
-Open de live preview, of in deze repo:
+Live PWA: https://rokit-beep.github.io/
+
+Lokaal:
+
+```bash
+npm install
+npm run dev
+```
+
+Build:
+
+```bash
+npm run build
+npm run preview
+```
+
+In het spel:
 
 ```
 kijk
@@ -42,5 +58,9 @@ Voortgang staat in `localStorage` op dit apparaat.
 ## Repo
 
 Canonieke bron: deze repository.
-Broncode: `src/game/` (parser, wereld, engine) en `src/components/game-shell.tsx`.
-Live PWA: https://rokit-beep.github.io/
+
+- `src/game/` — parser, wereld, engine, save, store
+- `src/components/game-shell.tsx` — schil
+- `src/main.tsx` — Vite-entry
+
+Oude werknaam `text-bssed-game-pro` is geen bron meer.
