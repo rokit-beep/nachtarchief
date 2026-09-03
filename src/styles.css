@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f2ece4;
+  --color-paper-2: #e7dfd4;
+  --color-ink: #0c0b0a;
+  --color-ink-soft: #1c1917;
+  --color-taupe: #9a9288;
+  --color-cream: #c8c4bc;
+  --color-seal: #6e3128;
+  --color-rule: #d4ccc2;
+  --font-display: "Libre Baskerville", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .paper-grain {
+    background-color: var(--color-paper);
+    background-image:
+      radial-gradient(transparent 0 0.5px, rgb(12 11 10 / 0.03) 0.6px),
+      linear-gradient(180deg, rgb(232 222 210 / 0.35), transparent 28%, rgb(12 11 10 / 0.03) 100%);
+    background-size: 3px 3px, 100% 100%;
+  }
+
+  .type-caret {
+    display: inline-block;
+    width: 0.55ch;
+    height: 1em;
+    margin-left: 1px;
+    background: var(--color-ink);
+    transform: translateY(2px);
+    animation: caret-blink 1.05s steps(1, end) infinite;
+  }
+}
+
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .type-caret { animation: none; }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
